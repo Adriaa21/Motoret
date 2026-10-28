@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="third party">
+      <UniqueIdentifier>{32b2add7-c578-4404-b3e0-3fd14a8bb4fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third party\imgui">
+      <UniqueIdentifier>{6dff815c-7334-4707-9084-4b7eeaf30d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="third party\imgui\header">
+      <UniqueIdentifier>{927d3a1e-ce6b-4431-a11a-051551bd08d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\motor">
+      <UniqueIdentifier>{6d0a953c-eaeb-4088-adcb-ffc0e5d742be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\motor">
+      <UniqueIdentifier>{b856ff38-8f54-4c4c-93b5-7f08f4d30956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gameplay">
+      <UniqueIdentifier>{c9d4b70a-ce2d-4d8b-863c-5a1f797ecc99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gameplay">
+      <UniqueIdentifier>{af1f6903-f617-4ab4-b047-979a1d1d787d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_demo.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_draw.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_tables.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_widgets.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_impl_sdlrenderer3.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="thirdparty\imgui\imgui_impl_sdl3.cpp">
+      <Filter>third party\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="source\motor\motor.cpp">
+      <Filter>Source Files\motor</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gameplay\holamon.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="vectors.cpp">
+      <Filter>Source Files\motor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thirdparty\imgui\headers\imconfig.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imgui.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imgui_internal.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imstb_rectpack.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imstb_textedit.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imstb_truetype.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imgui_impl_sdlrenderer3.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="thirdparty\imgui\headers\imgui_impl_sdl3.h">
+      <Filter>third party\imgui\header</Filter>
+    </ClInclude>
+    <ClInclude Include="source\motor\motor.h">
+      <Filter>Header Files\motor</Filter>
+    </ClInclude>
+    <ClInclude Include="source\motor\gameobject.h">
+      <Filter>Header Files\motor</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameplay\holamon.h">
+      <Filter>Header Files\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Vectors_y_punts\vectors.h">
+      <Filter>Header Files\motor</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
