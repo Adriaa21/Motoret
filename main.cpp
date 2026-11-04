@@ -1,6 +1,7 @@
 #include "motor/motor.h"
 #include "Vectors_y_punts/vectors.h"
 #include "gameplay/holamon.h"
+#include "gameplay/GoSpawner.h"
 
 using namespace motoret;
 // Main code
@@ -19,6 +20,8 @@ int main(int, char**)
     exemple::GOHolaMon holaMon("hola món");
     Motoret::GetInstance().AddGameObject(&holaMon);
 
+    exemple::GoSpawner Spawner1("Spawnerr", 5);
+    Motoret::GetInstance().AddGameObject(&Spawner1);
 
 
     //-------------------------------------------------

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\gameplay\GoSpawner.cpp" />
     <ClCompile Include="source\gameplay\holamon.cpp" />
     <ClCompile Include="source\motor\motor.cpp" />
     <ClCompile Include="thirdparty\imgui\imgui.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="vectors.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\gameplay\GoSpawner.h" />
     <ClInclude Include="source\gameplay\holamon.h" />
     <ClInclude Include="source\motor\gameobject.h" />
     <ClInclude Include="source\motor\motor.h" />

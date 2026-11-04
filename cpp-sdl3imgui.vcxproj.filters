@@ -69,6 +69,9 @@
     <ClCompile Include="vectors.cpp">
       <Filter>Source Files\motor</Filter>
     </ClCompile>
+    <ClCompile Include="source\gameplay\GoSpawner.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thirdparty\imgui\headers\imconfig.h">
@@ -106,6 +109,9 @@
     </ClInclude>
     <ClInclude Include="source\Vectors_y_punts\vectors.h">
       <Filter>Header Files\motor</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameplay\GoSpawner.h">
+      <Filter>Source Files\gameplay</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
