@@ -113,6 +113,7 @@ int Motoret::Init()
 
 void Motoret::Run()
 {
+    Uint64 lastTime = SDL_GetPerformanceCounter();
     while (!_done)
     {
 
@@ -120,20 +121,12 @@ void Motoret::Run()
         // Motoret: deltaTime
         //-------------------------------------------------
         
-        int variable = 0;
-        bool quit = false;
-        unsigned int lastTime = 0, currentTime;
+        Uint64 currentTime = SDL_GetPerformanceCounter();
 
-        while (!quit) {
-            currentTime = SDL_GetTicks();
-            if (currentTime > lastTime +1000){
-                printf("Report: %d/n", variable);
-                printf("olaolaola");
-                lastTime = currentTime;
-                
-                
-            }
-        }
+        _deltaTime = (float)(currentTime - lastTime)
+            / (float)SDL_GetPerformanceFrequency();
+
+        lastTime = currentTime;
         
 
 
@@ -240,4 +233,10 @@ GameObject* Motoret::RemoveGameObject(GameObject* gameObject)
     }
 
     return nullptr;
+}
+
+//Prueba mostrar deltatime
+float Motoret::GetDeltaTime() const
+{
+    return _deltaTime;
 }

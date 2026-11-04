@@ -1,6 +1,7 @@
 #include "holamon.h"
 #include "Vectors_y_punts/vectors.h"
 #include "imgui.h"
+#include <motor/motor.h>
 
 using namespace exemple;
 
@@ -38,7 +39,7 @@ void GOHolaMon::RenderimGui()
 
 	static int v1x = 0, v1y = 0;
 	static int v2x = 0, v2y = 0;
-
+	
 	ImGui::Text("Vector 1");
 	ImGui::InputInt("V1 X", &v1x);
 	ImGui::InputInt("V1 Y", &v1y);
@@ -56,5 +57,12 @@ void GOHolaMon::RenderimGui()
 
 		
 
+	ImGui::End();
+
+	//deltatimee pruebs
+
+	ImGui::Begin("Delta Time");
+	float deltaTime = motoret::Motoret::GetInstance().GetDeltaTime();
+	ImGui::Text("Delta Time: %.5f", deltaTime);
 	ImGui::End();
 }

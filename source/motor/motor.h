@@ -18,6 +18,7 @@ namespace motoret
 		//Variables
 		std::vector<GameObject*> _gameObjects;
 		bool _done;
+		float _deltaTime;
 
 		//SDL3
 		SDL_Window* _window;
@@ -40,6 +41,7 @@ namespace motoret
 		int Init();
 		void Run();
 		void Close();
+		float GetDeltaTime() const;
 
 		//Aquestes funcions cal refer-les
 		//no estan preparades per fer-se servir
