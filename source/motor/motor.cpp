@@ -6,11 +6,19 @@ using namespace motoret;
 
 Motoret::Motoret()
     :_done(true),
+    _deltaTime(0.0f),
     _window(nullptr),
     _renderer(nullptr),
     io(nullptr)
 {
     _clearColor = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+}
+
+Motoret& Motoret::GetInstance()
+{
+    static Motoret    instance; // Guaranteed to be destroyed.
+    // Instantiated on first use.
+    return instance;
 }
 
 Motoret::~Motoret()
@@ -107,6 +115,30 @@ void Motoret::Run()
 {
     while (!_done)
     {
+
+        //-------------------------------------------------
+        // Motoret: deltaTime
+        //-------------------------------------------------
+        
+        int variable = 0;
+        bool quit = false;
+        unsigned int lastTime = 0, currentTime;
+
+        while (!quit) {
+            currentTime = SDL_GetTicks();
+            if (currentTime > lastTime +1000){
+                printf("Report: %d/n", variable);
+                printf("olaolaola");
+                lastTime = currentTime;
+                
+                
+            }
+        }
+        
+
+
+
+
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application, or clear/overwrite your copy of the mouse data.

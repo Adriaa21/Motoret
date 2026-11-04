@@ -14,6 +14,7 @@ namespace motoret
 {
 	class Motoret
 	{
+	private:
 		//Variables
 		std::vector<GameObject*> _gameObjects;
 		bool _done;
@@ -24,12 +25,18 @@ namespace motoret
 		ImGuiIO* io;
 
 		ImVec4 _clearColor;
-		//Funcions
 
-	public:
-		Motoret();
-		~Motoret();
 		//Funcions
+		Motoret();
+	public:
+		//Singleton
+		static Motoret& GetInstance();
+		Motoret(Motoret const&) = delete;
+		void operator=(Motoret const&) = delete;
+
+
+		~Motoret();
+		//Funcions	
 		int Init();
 		void Run();
 		void Close();

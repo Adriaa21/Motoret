@@ -49,8 +49,11 @@ void GOHolaMon::RenderimGui()
 
 	ImGui::Begin("Hola, Test Punts i Vectors");
 		int punt1 = 0, punt2 = 0;
+		int fr;
+		
 		ImGui::InputInt("punt1", &punt1);
 		ImGui::InputInt("punt2", &punt2);
+
 		
 
 	ImGui::End();

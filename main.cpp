@@ -2,6 +2,7 @@
 #include "Vectors_y_punts/vectors.h"
 #include "gameplay/holamon.h"
 
+using namespace motoret;
 // Main code
 int main(int, char**)
 {
@@ -9,28 +10,27 @@ int main(int, char**)
     //-------------------------------------------------
     // Motoret: Inicialització dels paràmetres del motor
     //-------------------------------------------------
-    motoret::Motoret motoret;
-    if (motoret.Init() > 0)
+    if (Motoret::GetInstance().Init() > 0)
         return 1;
 
     //-------------------------------------------------
     // Motoret: Inicialització de l'estat de joc
     //-------------------------------------------------
     exemple::GOHolaMon holaMon("hola món");
-    motoret.AddGameObject(&holaMon);
+    Motoret::GetInstance().AddGameObject(&holaMon);
 
 
 
     //-------------------------------------------------
     // Motoret: Execució del joc
     //-------------------------------------------------
-    motoret.Run();
+    Motoret::GetInstance().Run();
 
 
     //-------------------------------------------------
     // Motoret: Tancament del motor
     //-------------------------------------------------
-    motoret.Close();
+    Motoret::GetInstance().Close();
 
     return 0;
 }
