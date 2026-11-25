@@ -16,7 +16,7 @@ namespace motoret
 	{
 	private:
 		//Variables
-		std::vector<GameObject*> _gameObjects;
+		std::vector<GameObject*> _gameObjects, _gameObjectsToAdd, _gameObjectsToRemove;
 		bool _done;
 		float _deltaTime;
 
@@ -43,10 +43,11 @@ namespace motoret
 		void Close();
 		float GetDeltaTime() const;
 
-		//Aquestes funcions cal refer-les
-		//no estan preparades per fer-se servir
-		//a temps d'execució
 		void AddGameObject(GameObject* gameObject);
 		GameObject* RemoveGameObject(GameObject* gameObject);
+
+		//GFX
+		void DrawFilledRectangle(const SDL_Color& color, const SDL_FRect* rect);
+		//void DrawSprite(const SDL_Texture* texture, const SDL_FRect* rect, const SDL_FRect* subSection = nullptr);
 	};
 }

@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="source\gameplay\GoDestructor.cpp" />
     <ClCompile Include="source\gameplay\GoSpawner.cpp" />
     <ClCompile Include="source\gameplay\holamon.cpp" />
     <ClCompile Include="source\motor\motor.cpp" />
@@ -153,8 +154,10 @@
     <ClCompile Include="vectors.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\gameplay\GoDestructor.h" />
     <ClInclude Include="source\gameplay\GoSpawner.h" />
     <ClInclude Include="source\gameplay\holamon.h" />
+    <ClInclude Include="source\motor\FilledRectangle.h" />
     <ClInclude Include="source\motor\gameobject.h" />
     <ClInclude Include="source\motor\motor.h" />
     <ClInclude Include="source\Vectors_y_punts\vectors.h" />

@@ -72,6 +72,9 @@
     <ClCompile Include="source\gameplay\GoSpawner.cpp">
       <Filter>Source Files\gameplay</Filter>
     </ClCompile>
+    <ClCompile Include="source\gameplay\GoDestructor.cpp">
+      <Filter>Source Files\gameplay</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="thirdparty\imgui\headers\imconfig.h">
@@ -111,7 +114,13 @@
       <Filter>Header Files\motor</Filter>
     </ClInclude>
     <ClInclude Include="source\gameplay\GoSpawner.h">
-      <Filter>Source Files\gameplay</Filter>
+      <Filter>Header Files\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gameplay\GoDestructor.h">
+      <Filter>Header Files\gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="source\motor\FilledRectangle.h">
+      <Filter>Header Files\motor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

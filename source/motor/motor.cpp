@@ -114,6 +114,18 @@ int Motoret::Init()
 void Motoret::Run()
 {
     Uint64 lastTime = SDL_GetPerformanceCounter();
+
+    //-------------------------------------------------
+    // Motoret: afegir els gameObjects pendents
+    //-------------------------------------------------
+    std::vector<GameObject*> temp;
+    temp = _gameObjectsToAdd;
+    _gameObjectsToAdd.clear();
+    for (auto const& gameObject : temp)
+    {
+        _gameObjects.push_back(gameObject);
+    }
+
     while (!_done)
     {
 
@@ -167,6 +179,26 @@ void Motoret::Run()
             gameObject->Update();
         }
 
+        //-------------------------------------------------
+        // Motoret: afegir i eliminar els gameObjects pendents
+        //-------------------------------------------------
+        temp = _gameObjectsToAdd;
+        _gameObjectsToAdd.clear();
+        for (auto const& gameObject : temp)
+        {
+            _gameObjects.push_back(gameObject);
+            gameObject->OnAdded();
+        }
+
+        temp = _gameObjectsToRemove;
+        _gameObjectsToRemove.clear();
+        for (auto const& gameObject : temp)
+        {
+            _gameObjects.erase(std::remove(_gameObjects.begin(), _gameObjects.end(), gameObject));
+            gameObject->OnRemoved();
+        }
+
+
         // Start the Dear ImGui frame
         ImGui_ImplSDLRenderer3_NewFrame();
         ImGui_ImplSDL3_NewFrame();
@@ -218,25 +250,24 @@ void Motoret::Close()
 
 void Motoret::AddGameObject(GameObject* gameObject)
 {
-    _gameObjects.push_back(gameObject);
+    _gameObjectsToAdd.push_back(gameObject);
 }
 
 GameObject* Motoret::RemoveGameObject(GameObject* gameObject)
 {
-    for (auto it = _gameObjects.begin(); it != _gameObjects.end(); ++it)
-    {
-        if (*it == gameObject)
-        {
-            _gameObjects.erase(it);
-            return gameObject;
-        }
-    }
-
-    return nullptr;
+    _gameObjectsToRemove.push_back(gameObject);
+    return gameObject;
 }
 
 //Prueba mostrar deltatime
 float Motoret::GetDeltaTime() const
 {
     return _deltaTime;
+}
+
+// Pintar 
+void Motoret::DrawFilledRectangle(const SDL_Color& color, const SDL_FRect* rect)
+{
+    SDL_SetRenderDrawColor(_renderer, color.r, color.g, color.b, color.a);
+    SDL_RenderFillRect(_renderer, rect);
 }

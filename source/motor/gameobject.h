@@ -19,6 +19,8 @@ namespace motoret
 		virtual void RenderimGui() {}
 		virtual void Render() {}
 
+		virtual void OnAdded() {}
+		virtual void OnRemoved() {}
 		virtual ~GameObject() = default;
 	};
 }

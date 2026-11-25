@@ -1,6 +1,6 @@
 #include <motor/motor.h>
 #include "GoSpawner.h"
-#include "holamon.h"
+#include "gameplay/godestructor.h"
 #include "imgui.h"
 
 using namespace exemple;
@@ -18,7 +18,7 @@ void GoSpawner::Update() {
 	currentTime += Motoret::GetInstance().GetDeltaTime();
 	if (currentTime > spawnTime) {
 		currentTime = 0;
-		GOHolaMon* Prueba1 = new GOHolaMon("prueba");
+		GoDestructor* Prueba1 = new GoDestructor("destructor", 5);
 		Motoret::GetInstance().AddGameObject(Prueba1);
 	}
 }

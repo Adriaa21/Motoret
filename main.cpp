@@ -20,7 +20,7 @@ int main(int, char**)
     exemple::GOHolaMon holaMon("hola món");
     Motoret::GetInstance().AddGameObject(&holaMon);
 
-    exemple::GoSpawner Spawner1("Spawnerr", 5);
+    exemple::GoSpawner Spawner1("Spawnerr", 3);
     Motoret::GetInstance().AddGameObject(&Spawner1);
 
 
